@@ -5,7 +5,8 @@ import { OrbitControls, useGLTF } from '@react-three/drei';
 
 const BackpackModel = ({texture, color, metalColor, metalNormal, metalOcclusion}) => {
 
-  const { scene } = useGLTF("/models/backpack.glb");
+  const { scene } = useGLTF("/project_webAr/models/backpack.glb"); 
+
   scene.traverse((obj) => {
     if (obj.isMesh) {
       obj.material.map = texture;
